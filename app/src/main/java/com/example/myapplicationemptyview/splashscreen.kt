@@ -9,6 +9,12 @@ import android.view.WindowManager
 
 class splashscreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_splashscreen)
+
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
@@ -20,13 +26,9 @@ class splashscreen : AppCompatActivity() {
 
         // Handler().postDelayed({
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)
-
-
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splashscreen)
     }
 }
